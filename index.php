@@ -28,8 +28,13 @@ require('./php/categorias.php');
             
         <div id="mySidenav" class="sidenav">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="<?php INCLUDE_PATH?>/home">Home</a>
             <a href="<?php INCLUDE_PATH?>/perfil"><?php if(isset($user)){echo $user;}else{echo"Entrar/Registar";} ?></a>
             <a href="<?php INCLUDE_PATH?>/carrinho"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Carrinho</a>
+            <div class="mobileLink">
+                <a href="<?php INCLUDE_PATH?>/onde">Onde estamos</a>
+                <a href="<?php INCLUDE_PATH?>/contato">Contato</a>
+            </div>
             <a></a>
             <a></a>
             <?php 

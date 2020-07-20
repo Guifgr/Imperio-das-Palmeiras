@@ -11,6 +11,11 @@
     font-size: 5vh;
     text-transform: none;
 }
+
+a:link
+{
+  text-decoration:none !important;
+}
 .link
 {
   color: #111;
@@ -131,6 +136,9 @@ footer p{
 .mobile{
     display: none;
 }
+.mobileLink{
+    display: none;
+}
 
 
 @media screen and (max-width: 1280px){
@@ -175,6 +183,9 @@ footer p{
         text-decoration: none;
         color: #30694B;
         z-index: 0;
+    }
+    .mobileLink{
+      display: block;
     }
     footer{
         padding: 10px 0;
