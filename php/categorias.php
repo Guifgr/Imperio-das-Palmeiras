@@ -8,8 +8,6 @@ define("NOME", "nome");
         while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
             $arrayCategoriasMenu[] = $row[NOME];
         }
-    } else {
-        echo "0 results";
     }
 
     foreach ($arrayCategoriasMenu as $key => $value) {
