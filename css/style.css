@@ -9,6 +9,7 @@
 .escrita{
     font-family: 'Grenze Gotisch', cursive;
     font-size: 5vh;
+    text-transform: none;
 }
 
 a:link
@@ -87,7 +88,7 @@ nav.desktop li{
 nav.desktop a{
     color: #999999;
     text-decoration: none;
-    text-transform: lowercase;
+
 }
 
 .sideOpen{
