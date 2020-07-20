@@ -1,5 +1,6 @@
 <?php 
 require('./php/config.php'); 
+require('./php/categorias.php'); 
 ?>
 
 <!DOCTYPE html>
@@ -27,10 +28,19 @@ require('./php/config.php');
             
         <div id="mySidenav" class="sidenav">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-            <a href="#">About</a>
-            <a href="#">Services</a>
-            <a href="#">Clients</a>
-            <a href="#">Contact</a>
+            <a href="<?php INCLUDE_PATH?>/perfil"><?php if(isset($user)){echo $user;}else{echo"Entrar/Registar";} ?></a>
+            <a href="<?php INCLUDE_PATH?>/carrinho"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Carrinho</a>
+            <a></a>
+            <a></a>
+            <?php 
+                if(isset($arrayCategorias)){
+                    foreach ($arrayCategorias as $key => $value) {
+                        echo $value;
+                    }
+                }else{
+                    echo "<a>Categorias em manutenção!</a>";
+                }
+            ?>
         </div>
         <span class="sideOpen center" onclick="openNav()">&#9776;</span>
 
@@ -40,14 +50,17 @@ require('./php/config.php');
                 <ul class="homeText">
                     <li><a href="<?php INCLUDE_PATH?>/home">Home</a></li>
                     <li><a href="<?php INCLUDE_PATH?>/perfil">perfil</a></li>
-                    <li><a class="escrita" href="<?php INCLUDE_PATH?>/logout">• Império das Palmeiras •</a></li>
-                    <li><a href="<?php INCLUDE_PATH?>/maps">Onde estamos</a></li>
+                    <li><a class="escrita" href="<?php INCLUDE_PATH?>/home">• Império das Palmeiras •</a></li>
+                    <li><a href="<?php INCLUDE_PATH?>/onde">Onde estamos</a></li>
                     <li><a href="<?php INCLUDE_PATH?>/contato">Contato</a></li>
                 </ul>
             </div>
         </nav> 
-        <a class="escrita mobile" href="<?php INCLUDE_PATH?>/logout">• Império das Palmeiras •</a>
+        <a class="escrita mobile" href="<?php INCLUDE_PATH?>/home">• Império das Palmeiras •</a>
         <i class="fa fa-search lupa" onclick="openSearch()"></i>
+        <a class="link" href="<?php INCLUDE_PATH?>/carrinho">
+            <i class="fa fa-shopping-cart carrinho"></i>
+        </a>
         
 </header>
 

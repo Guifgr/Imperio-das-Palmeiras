@@ -14,7 +14,11 @@
 
 a:link
 {
-text-decoration:none;
+  text-decoration:none !important;
+}
+.link
+{
+  color: #111;
 }
 a:hover{
     opacity: 0.5;
@@ -104,6 +108,12 @@ nav.desktop a{
     right: 10%;
     cursor: pointer;
 }
+.carrinho{
+  position: absolute;
+  margin-top: -100px;
+  right: 12%;
+  cursor: pointer;
+}
 #site{
     height: 75vmin;
     background-color: rgb(240, 238, 238);
@@ -149,7 +159,15 @@ footer p{
         position: absolute;
         margin-top: 7vh;
         z-index: 1;
+        right: 5%;
     }
+    .carrinho{
+      top: 0vh;
+      position: absolute;
+      margin-top: 7vh;
+      z-index: 1;
+      right: 15%;
+  }
     .mobile{
         top: 0vh;
         display: block;
