@@ -18,6 +18,7 @@ require('./php/categorias.php');
     <link href="https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@500&family=Playfair+Display&display=swap" rel="stylesheet">
 
     <link href="./css/style.css" rel="stylesheet" type="text/css" />
+    <link href="./css/home.css" rel="stylesheet" type="text/css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="viewport" content="width=device-width">
     <title>Imperio das Palmeiras</title>
@@ -73,7 +74,7 @@ require('./php/categorias.php');
     <div id="myOverlay" class="overlay">
     <span class="closebtn" onclick="closeSearch()" title="Close Overlay">x</span>
         <div class="overlay-content">
-        <form action="./php/search.php">
+        <form action="./home">
             <input type="text" placeholder="Search.." name="search">
             <button type="submit"><i class="fa fa-search"></i></button>
          </form>

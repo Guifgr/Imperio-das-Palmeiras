@@ -115,10 +115,11 @@ nav.desktop a{
   cursor: pointer;
 }
 #site{
-    height: 75vmin;
     background-color: rgb(240, 238, 238);
 }
-
+.main{
+  text-align: center;
+}
 footer{
     z-index: 1;
     background: white;
