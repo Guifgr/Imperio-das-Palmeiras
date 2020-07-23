@@ -116,6 +116,7 @@ nav.desktop a{
 }
 #site{
     background-color: rgb(240, 238, 238);
+    min-height:80vh; 
 }
 .main{
   text-align: center;
@@ -154,9 +155,6 @@ footer p{
     }  
     .homeText{
         display: none;
-    }
-    #site{
-        height: 75vh;
     }
     .lupa{
         top: 0vh;
