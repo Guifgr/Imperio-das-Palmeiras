@@ -1,4 +1,3 @@
 <?php
-    define("INCLUDE_PATH", "https//www.guilhermefgr.com.br");
-
-?>
+    define("INCLUDE_PATH", "https://guilhermefgr.com.br/");
+    error_reporting(0);
