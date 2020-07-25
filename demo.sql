@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 23-Jul-2020 às 03:13
+-- Generation Time: 25-Jul-2020 às 03:29
 -- Versão do servidor: 10.1.38-MariaDB
 -- versão do PHP: 7.3.4
 
@@ -30,14 +30,14 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `categorias` (
   `id` int(11) NOT NULL,
-  `nome` varchar(255) NOT NULL
+  `nome_categoria` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Extraindo dados da tabela `categorias`
 --
 
-INSERT INTO `categorias` (`id`, `nome`) VALUES
+INSERT INTO `categorias` (`id`, `nome_categoria`) VALUES
 (1, 'Plantas Internas'),
 (2, 'Plantas Externas'),
 (3, 'Palmeiras'),
