@@ -33,7 +33,7 @@ require("./php/connect.php");
     else if(isset($_GET["categoria"])){
         $categoria = $_GET["categoria"];
         $categoria = str_replace("-"," ",$categoria);
-        $sql = "SELECT nome, id_categoria, preco, imagem_link FROM `produtos` WHERE id_categoria = (select id from `categorias` where nome like '%$categoria%')";
+        $sql = "SELECT nome, preco, imagem_link FROM `produtos` WHERE id_categoria = (select id from `categorias` where nome_categoria like '%$categoria%')";
         $result = $conn->query($sql);
         
         if ($result->rowCount() > 0){
