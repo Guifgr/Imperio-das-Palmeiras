@@ -2,12 +2,12 @@
 require("connect.php");
 define("NOME", "nome");
 $include = INCLUDE_PATH;
-  $sql = "SELECT nome FROM `categorias` WHERE 1";
+  $sql = "SELECT nome_categoria FROM `categorias` WHERE 1";
   $result = $conn->query($sql);
   
     if ($result->rowCount() > 0){
         while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
-            $arrayCategoriasMenu[] = $row[NOME];
+            $arrayCategoriasMenu[] = $row['nome_categoria'];
         }
     } else {
         echo "0 results";
