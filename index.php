@@ -1,6 +1,7 @@
 <?php 
 require('./php/config.php'); 
 require('./php/categorias.php'); 
+require('./php/contatosql.php'); 
 ?>
 
 <!DOCTYPE html>
@@ -20,6 +21,8 @@ require('./php/categorias.php');
     <link href="./css/style.css" rel="stylesheet" type="text/css" />
     <link href="./css/home.css" rel="stylesheet" type="text/css" />
     <link href="./css/onde.css" rel="stylesheet" type="text/css" />
+    <link href="./css/contato.css" rel="stylesheet" type="text/css" />
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="viewport" content="width=device-width">
     <title>Imperio das Palmeiras</title>

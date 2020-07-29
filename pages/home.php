@@ -11,9 +11,6 @@
             else if(isset($_GET["search"])){
                 echo 'Pesquisando por ' . $_GET["search"];
             }
-            else{
-                echo "home";
-            }
         ?>
     </h1>
 <!----------------------------------------------------------------------------->

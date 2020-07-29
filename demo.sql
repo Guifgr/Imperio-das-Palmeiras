@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 25-Jul-2020 às 03:29
+-- Generation Time: 29-Jul-2020 às 05:05
 -- Versão do servidor: 10.1.38-MariaDB
 -- versão do PHP: 7.3.4
 
@@ -42,6 +42,31 @@ INSERT INTO `categorias` (`id`, `nome_categoria`) VALUES
 (2, 'Plantas Externas'),
 (3, 'Palmeiras'),
 (4, 'Cauda de raposa');
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `contato`
+--
+
+CREATE TABLE `contato` (
+  `id` int(11) NOT NULL,
+  `imagem` varchar(255) NOT NULL,
+  `texto` varchar(255) NOT NULL,
+  `nome` varchar(255) NOT NULL,
+  `cargo` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `link` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Extraindo dados da tabela `contato`
+--
+
+INSERT INTO `contato` (`id`, `imagem`, `texto`, `nome`, `cargo`, `email`, `link`) VALUES
+(1, 'https://s2.glbimg.com/jsaPuF7nO23vRxQkuJ_V3WgouKA=/e.glbimg.com/og/ed/f/original/2014/06/10/461777879.jpg', 'Colocar algo aqui', 'Pessoa Aleatória', 'Indefinido', 'pessoa@hotmaill,com', 'ainda nada'),
+(2, 'https://www.chalestriunfo.com.br/estilo/Adilson/foto1.webp', 'Empresário sustentável que acredita no futuro', 'Adilson G. da Rocha', 'CEO', 'adilson.rocha69@hotmail.com', 'https://api.whatsapp.com/send?phone=5511974371974&text='),
+(3, 'https://media-exp1.licdn.com/dms/image/C4E03AQE8XEFlihnvBQ/profile-displayphoto-shrink_200_200/0?e=1601510400&v=beta&t=eQiA-CVqfr0iplvnHSnz0ZdUDDqnSVEv0hgoQuphveQ', 'C0dando o futuro!', 'Guilherme F. G. Rocha', 'Dev', 'gufigr@hotmail.com', 'https://www.linkedin.com/in/guifgr/');
 
 -- --------------------------------------------------------
 
@@ -95,6 +120,12 @@ INSERT INTO `users` (`id`, `username`, `password`, `created_at`) VALUES
 -- Indexes for table `categorias`
 --
 ALTER TABLE `categorias`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `contato`
+--
+ALTER TABLE `contato`
   ADD PRIMARY KEY (`id`);
 
 --
