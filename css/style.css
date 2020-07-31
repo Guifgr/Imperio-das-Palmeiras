@@ -300,11 +300,11 @@ footer p{
   right: 45px;
   font-size: 60px;
   cursor: pointer;
-  color: #ccc;
+  color: rgba(34,66,41);
 }
 
 .overlay .closebtn:hover {
-  color: rgb(168, 167, 167);
+  color: rgb(57, 114, 70);
 }
 
 /* Style the search field */
