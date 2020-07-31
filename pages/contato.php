@@ -1,5 +1,8 @@
-<br />
-<h2 style="text-align:center">Sobre nós</h2>
+<head>
+  <link href="./css/contato.css" rel="stylesheet" type="text/css" />
+</head>
+
+<h1 style="text-align:center">Sobre nós</h1>
 <br />
 <div class="row">
   <div class="column ">
@@ -9,7 +12,7 @@
         <h2><?php echo $nome1?></h2>
         <p class="title"><?php echo $cargo1?></p>
         <p><?php echo $texto1?></p>
-        <p><?php echo $email1?></p>
+        <p><a class="email" href="mailto:<?php echo $email2?>"><?php echo $email1?></a></p>
         <a href="<?php echo $link1?>"><p><button class="button">Contato</button></p></a>
       </div>
     </div>
@@ -22,7 +25,7 @@
         <h2><?php echo $nome2?></h2>
         <p class="title"><?php echo $cargo2?></p>
         <p><?php echo $texto2?></p>
-        <p><?php echo $email2?></p>
+        <p><a class="email" href="mailto:<?php echo $email2?>"><?php echo $email2?></a></p>
         <a href="<?php echo $link2?>"><p><button class="button">Contato</button></p></a>
       </div>
     </div>
@@ -35,8 +38,8 @@
         <h2><?php echo $nome3?></h2>
         <p class="title"><?php echo $cargo3?></p>
         <p><?php echo $texto3?></p>
-        <p><?php echo $email3?></p>
-        <a href="<?php echo $link3?>"><p><button class="button">Contato</button></p></a>
+        <p><a class="email" href="<?php echo $email3?>"><?php echo $email3?></a></p>
+        <a href="mailto:<?php echo $link3?>"><p><button class="button">Contato</button></p></a>
       </div>
     </div>
   </div>

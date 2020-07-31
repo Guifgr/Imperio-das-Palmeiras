@@ -11,7 +11,14 @@ body {
   *, *:before, *:after {
     box-sizing: inherit;
   }
-  
+  .row p{
+    margin-bottom: 2%;
+  }
+  .email{
+    color: black;
+    text-decoration-line: underline;
+    text-decoration-style: solid
+  }
   .column {
     float: left;
     width: 33.3%;
@@ -20,6 +27,7 @@ body {
   }
   
   .card {
+    border-radius: 2px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     margin: 8px;
   }

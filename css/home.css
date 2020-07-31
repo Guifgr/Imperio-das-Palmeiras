@@ -15,6 +15,7 @@
   }
   
   .flex > section > p {
+    margin: 5px;
     flex-grow: 1;
   }
   
@@ -55,18 +56,17 @@
   }
   
   h2 {
-    font-size: 25px;
+    font-size: 20px;
   }
   
   .flex > section {
-    background: #fff;
     padding: 1em;
     margin: 0.5em;
     border-radius: 4px;
   }
   
   button {
-    background: #009999 url(http://i.imgur.com/RWKrr8S.png);
+    background: rgba(34,66,41) url(http://i.imgur.com/RWKrr8S.png);
     background-repeat: no-repeat;
     background-position: 2em 50%;
     background-size: 2em;
@@ -84,7 +84,7 @@
   }
   
   button:hover {
-    background-color: #006B6B;
+    background-color: rgba(34,66,41, 0.7);
     background-size: 3em;
     background-position: 1.5em 50%;
   }
@@ -95,7 +95,7 @@
   }
   
   .flex li {
-    background: #eee;
+    background: white;
     font-weight: 700;
     padding: 0.3em 0.6em;
     border-radius: 1em;

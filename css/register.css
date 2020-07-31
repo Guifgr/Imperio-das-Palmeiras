@@ -1,0 +1,48 @@
+.column {
+  margin: auto;
+  width: 50vw;
+}
+.card {
+    padding: 50px;
+    margin: 8px;
+}
+label{
+    color: #555;
+}
+input{
+    border: 1px solid rgba(34,66,41, 0.3);
+    border-radius: 5px;
+    outline: 0;
+    display: inline-block;
+    color: black;
+    text-align: left;
+    font-size: 20px;
+    cursor: auto;
+    width: 100%;
+    padding: 20px;
+}
+input[type=checkbox]{
+    width: auto;
+}
+
+.button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    padding: 20px;
+}
+
+.button:hover {
+  background-color: #555;
+}
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
