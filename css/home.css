@@ -65,7 +65,7 @@
     border-radius: 4px;
   }
   
-  button {
+  .button {
     background: rgba(34,66,41) url(http://i.imgur.com/RWKrr8S.png);
     background-repeat: no-repeat;
     background-position: 2em 50%;
@@ -83,7 +83,7 @@
     width: 100%;
   }
   
-  button:hover {
+  .button:hover {
     background-color: rgba(34,66,41, 0.7);
     background-size: 3em;
     background-position: 1.5em 50%;

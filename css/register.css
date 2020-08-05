@@ -34,10 +34,18 @@ input[type=checkbox]{
     cursor: pointer;
     width: 100%;
     padding: 20px;
-}
-
-.button:hover {
-  background-color: #555;
+  }
+  .logar{
+    border: none;
+  margin-top: 20px;
+  width: 30%;
+  height: 50px;
+  background-color: rgba(34,66,41);
+  color: white;
+  font-family: 'Playfair Display', serif;
+  font-weight: bold;
+  border-radius: 4px;
+  text-decoration: underline;
 }
 
 @media screen and (max-width: 650px) {

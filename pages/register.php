@@ -24,6 +24,9 @@
             <br />
             <br />
             <button type="submit" class="button littleZoom">Registrar</button>
+            <br />
+            <a href=""><button type="submit" class="littleZoom logar">Já tenho conta!</button></a>
+            
         </form>        
       </div>
     </div>
