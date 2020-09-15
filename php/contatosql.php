@@ -5,7 +5,7 @@ $result = $conn->query($sql);
 if ($result->rowCount() > 0){
     while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
         $nome1 = $row['nome'];
-        $imagem1 = $row['imagem'];
+        $imagem1 = base64_encode($row['imagem']);
         $texto1 = $row['texto'];
         $cargo1 = $row['cargo'];
         $email1 = $row['email'];
@@ -21,7 +21,7 @@ $result = $conn->query($sql);
 if ($result->rowCount() > 0){
     while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
         $nome2 = $row['nome'];
-        $imagem2 = $row['imagem'];
+        $imagem2 = base64_encode($row['imagem']);
         $texto2 = $row['texto'];
         $cargo2 = $row['cargo'];
         $email2 = $row['email'];
@@ -37,7 +37,7 @@ $result = $conn->query($sql);
 if ($result->rowCount() > 0){
     while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
         $nome3 = $row['nome'];
-        $imagem3 = $row['imagem'];
+        $imagem3 = base64_encode($row['imagem']);
         $texto3 = $row['texto'];
         $cargo3 = $row['cargo'];
         $email3 = $row['email'];

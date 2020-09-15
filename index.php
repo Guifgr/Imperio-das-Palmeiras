@@ -34,11 +34,11 @@ require('./php/contatosql.php');
         <div id="mySidenav" class="sidenav">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
             <a href="<?php INCLUDE_PATH?>/home">Home</a>
-            <a href="<?php INCLUDE_PATH?>/perfil"><?php if(isset($user)){echo $user;}else{echo"Entrar/Registar";} ?></a>
+            <a href="https://api.whatsapp.com/send?phone=5511974371974&text=Ol%C3%A1%20venho%20do%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es!">Contato</a>
             <a href="<?php INCLUDE_PATH?>/carrinho"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Carrinho</a>
             <div class="mobileLink">
                 <a href="<?php INCLUDE_PATH?>/onde">Onde estamos</a>
-                <a href="<?php INCLUDE_PATH?>/contato">Contato</a>
+                <a href="<?php INCLUDE_PATH?>/sobre">Sobre</a>
             </div>
             <a></a>
             <a></a>
@@ -50,7 +50,7 @@ require('./php/contatosql.php');
                 }else{
                     echo "<a>Categorias em manutenção!</a>";
                 }
-            ?>
+                ?>
         </div>
         <span class="sideOpen center" onclick="openNav()">&#9776;</span>
 
@@ -58,19 +58,17 @@ require('./php/contatosql.php');
             <div class="center">
                 
                 <ul class="homeText">
-                    <li><a href="<?php INCLUDE_PATH?>/home">Home</a></li>
-                    <li><a href="<?php INCLUDE_PATH?>/perfil">perfil</a></li>
+                <li><a href="<?php INCLUDE_PATH?>/home">Home</a></li>
+                <li><a href="<?php INCLUDE_PATH?>/contato">Contato</a></li>
                     <li><a class="escrita" href="<?php INCLUDE_PATH?>/home">• Império das Palmeiras •</a></li>
                     <li><a href="<?php INCLUDE_PATH?>/onde">Onde estamos</a></li>
-                    <li><a href="<?php INCLUDE_PATH?>/contato">Contato</a></li>
+                    <li><a href="<?php INCLUDE_PATH?>/sobre">Sobre</a></li>
                 </ul>
             </div>
         </nav> 
         <a class="escrita mobile" href="<?php INCLUDE_PATH?>/home">• Império das Palmeiras •</a>
         <i class="fa fa-search lupa" onclick="openSearch()"></i>
-        <a class="link" href="<?php INCLUDE_PATH?>/carrinho">
-            <i class="fa fa-shopping-cart carrinho"></i>
-        </a>
+
         
 </header>
 

@@ -2,7 +2,7 @@
 require("./php/connect.php");
     if(isset($_GET["search"])){
         $search = $_GET["search"];
-        $sql = "SELECT produtos.nome, categorias.nome_categoria, produtos.preco, produtos.imagem_link FROM `produtos`, `categorias` WHERE nome like '%$search%' AND produtos.id_categoria = categorias.id";
+        $sql = "SELECT produtos.nome, categorias.nome_categoria, produtos.preco, foto.foto FROM `produtos`, `categorias`, `foto` WHERE nome like '%$search%' AND produtos.id_categoria = categorias.id AND foto.id_foto = produtos.id";
         $result = $conn->query($sql);
         
         if ($result->rowCount() > 0){
@@ -10,10 +10,10 @@ require("./php/connect.php");
                 $nome = ucwords($row['nome']);
                 $categoria = $row['nome_categoria'];
                 $preço = $row['preco'];
-                $imagem = $row['imagem_link'];
+                $foto = base64_encode($row['foto']);
                 $string[] = <<<EOD
                 <section>
-                <img src="$imagem" alt="Smartphone" />
+                <img src="data:image/jpeg;base64,$foto"/>
                 <h2>$nome</h2>
                 <p>Categoria: $categoria</p>
                 <aside>
@@ -33,17 +33,17 @@ require("./php/connect.php");
     else if(isset($_GET["categoria"])){
         $categoria = $_GET["categoria"];
         $categoria = str_replace("-"," ",$categoria);
-        $sql = "SELECT nome, preco, imagem_link FROM `produtos` WHERE id_categoria = (select id from `categorias` where nome_categoria like '%$categoria%')";
+        $sql = "SELECT produtos.nome, produtos.preco, foto.foto FROM `produtos`, `foto` WHERE id_categoria = (select categorias.id from `categorias` where nome_categoria like '%$categoria%') and foto.id_foto = produtos.id";
         $result = $conn->query($sql);
         
         if ($result->rowCount() > 0){
             while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
                 $nome = ucwords($row['nome']);
                 $preço = $row['preco'];
-                $imagem = $row['imagem_link'];
+                $foto = base64_encode($row['foto']);
                 $string[] = <<<EOD
                 <section class="zoom">
-                <img src="$imagem" alt="Smartphone" />
+                <img src="data:image/jpeg;base64,$foto"/>
                 <h2>$nome</h2>
                 <p>Categoria: $categoria</p>
                 <aside>
@@ -51,7 +51,7 @@ require("./php/connect.php");
                 <li>Preço: R$$preço</li>
                 <li>Em estoque!</li>
                 </ul>
-                <button>Adicionar ao carrinho</button>
+                <button class="button">Adicionar ao carrinho</button>
                 </aside>
                 </section>
                 EOD;
@@ -60,7 +60,7 @@ require("./php/connect.php");
             echo "Não encontrei nada em nossos produtos na categoria: ".$categoria;
         }
     }else{
-        $sql = "SELECT produtos.nome, categorias.nome_categoria, produtos.preco, produtos.imagem_link FROM `produtos`, `categorias`  WHERE produtos.id_categoria = categorias.id LIMIT 20";
+        $sql = "SELECT produtos.nome, categorias.nome_categoria, produtos.preco, foto.foto FROM `produtos`, `categorias`, `foto`  WHERE produtos.id_categoria = categorias.id and produtos.id = foto.id_foto LIMIT 20";
         $result = $conn->query($sql);
         
         if ($result->rowCount() > 0){
@@ -68,10 +68,10 @@ require("./php/connect.php");
                 $nome = ucwords($row['nome']);
                 $categoria = $row['nome_categoria'];
                 $preço = $row['preco'];
-                $imagem = $row['imagem_link'];
+                $foto = base64_encode($row['foto']);
                 $string[] = <<<EOD
                 <section class="zoom">
-                <img src="$imagem" alt="Smartphone" />
+                <img src="data:image/jpeg;base64,$foto"/>
                 <h2>$nome</h2>
                 <p>Categoria: $categoria</p>
                 <aside>
@@ -79,13 +79,13 @@ require("./php/connect.php");
                 <li>Preço: R$$preço</li>
                 <li>Em estoque!</li>
                 </ul>
-                <button>Adicionar ao carrinho</button>
+                <button class="button">Adicionar ao carrinho</button>
                 </aside>
                 </section>
                 EOD;
             }
         } else {
-            echo "Não encontrei nada em nossos produtos na categoria: ".$categoria;
+            echo "Não encontrei nada em nossos produtos na categoria: ";
         }
     }
 ?>
