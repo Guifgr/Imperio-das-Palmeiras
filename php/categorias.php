@@ -1,6 +1,5 @@
 <?php
 require("connect.php");
-define("NOME", "nome");
 $include = INCLUDE_PATH;
   $sql = "SELECT nome_categoria FROM `categorias` WHERE 1";
   $result = $conn->query($sql);

@@ -21,8 +21,14 @@ header{
 {
   color: #224229;
 }
-a:hover{
-    opacity: 0.5;
+
+a{
+  text-decoration: none!important;
+  decoration: none; 
+}
+
+li:hover{
+  opacity: 0.5;
 }
 .logo{
     width: 150px;

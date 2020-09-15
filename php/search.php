@@ -21,7 +21,7 @@ require("./php/connect.php");
                 <li>Preço: R$$preço</li>
                 <li>Em estoque!</li>
                 </ul>
-                <button>Adicionar ao carrinho</button>
+                <a href="https://api.whatsapp.com/send?phone=5511974371974&text=Gostaria%20de%20comprar%20o(a)%20$nome%20do%20site%20no%20valor%20de%20R$$preço%20reais"><button class="button">Comprar!</button><a/>
                 </aside>
                 </section>
                 EOD;
@@ -51,7 +51,7 @@ require("./php/connect.php");
                 <li>Preço: R$$preço</li>
                 <li>Em estoque!</li>
                 </ul>
-                <button class="button">Adicionar ao carrinho</button>
+                <a href="https://api.whatsapp.com/send?phone=5511974371974&text=Gostaria%20de%20comprar%20o(a)%20$nome%20do%20site%20no%20valor%20de%20R$$preço%20reais"><button class="button">Comprar!</button><a/>
                 </aside>
                 </section>
                 EOD;
@@ -79,7 +79,7 @@ require("./php/connect.php");
                 <li>Preço: R$$preço</li>
                 <li>Em estoque!</li>
                 </ul>
-                <button class="button">Adicionar ao carrinho</button>
+                <a href="https://api.whatsapp.com/send?phone=5511974371974&text=Gostaria%20de%20comprar%20o(a)%20$nome%20do%20site%20no%20valor%20de%20R$$preço%20reais"><button class="button">Comprar!</button><a/>
                 </aside>
                 </section>
                 EOD;
