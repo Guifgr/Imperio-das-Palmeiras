@@ -13,7 +13,7 @@ require("./php/connect.php");
                 $foto = base64_encode($row['foto']);
                 $string[] = <<<EOD
                 <section>
-                <img src="data:image/jpeg;base64,$foto"/>
+                <img load="lazy" src="data:image/jpeg;base64,$foto"/>
                 <h2>$nome</h2>
                 <p>Categoria: $categoria</p>
                 <aside>
@@ -43,7 +43,7 @@ require("./php/connect.php");
                 $foto = base64_encode($row['foto']);
                 $string[] = <<<EOD
                 <section class="zoom">
-                <img src="data:image/jpeg;base64,$foto"/>
+                <img load="lazy" src="data:image/jpeg;base64,$foto"/>
                 <h2>$nome</h2>
                 <p>Categoria: $categoria</p>
                 <aside>
@@ -57,7 +57,7 @@ require("./php/connect.php");
                 EOD;
             }
         } else {
-            echo "Não encontrei nada em nossos produtos na categoria: ".$categoria;
+            echo "<script>alert('Não encontrei nada em nossos produtos na categoria: ".$categoria."');</script>";
         }
     }else{
         $sql = "SELECT produtos.nome, categorias.nome_categoria, produtos.preco, foto.foto FROM `produtos`, `categorias`, `foto`  WHERE produtos.id_categoria = categorias.id and produtos.id = foto.id_foto LIMIT 20";
@@ -71,7 +71,7 @@ require("./php/connect.php");
                 $foto = base64_encode($row['foto']);
                 $string[] = <<<EOD
                 <section class="zoom">
-                <img src="data:image/jpeg;base64,$foto"/>
+                <img load="lazy"src="data:image/jpeg;base64,$foto"/>
                 <h2>$nome</h2>
                 <p>Categoria: $categoria</p>
                 <aside>
@@ -85,7 +85,7 @@ require("./php/connect.php");
                 EOD;
             }
         } else {
-            echo "Não encontrei nada em nossos produtos na categoria: ";
+            echo "<h1>Não encontrei nada em nossos produtos na categoria</h1>";
         }
     }
 ?>

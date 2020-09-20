@@ -73,6 +73,10 @@ require('./php/contatosql.php');
 </header>
 
 <main>
+    <div>
+        <h1 class="telefone">Entre em contato!<br /><a id="tel" href="tel:(11)97437-1974">(11)97437-1974</a></h1>
+    </div>
+
     <div id="myOverlay" class="overlay">
     <span class="closebtn" onclick="closeSearch()" title="Close Overlay">x</span>
         <div class="overlay-content">

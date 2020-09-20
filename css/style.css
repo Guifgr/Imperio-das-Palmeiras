@@ -166,7 +166,7 @@ footer p{
 }
 
 
-@media screen and (max-width: 1280px){
+@media screen and (max-width: 1400px){
     .sideOpen{
         top: 0vh;
         margin-top: 5.5vh;
